@@ -83,7 +83,7 @@ if (! function_exists('backpack_users_have_email')) {
         $user_model_fqn = config('backpack.base.user_model_fqn');
         $user = new $user_model_fqn();
 
-        return \Schema::hasColumn($user->getTable(), 'email');
+        return \Schema::hasColumn($user->getTable(), backpack_authentication_column());
     }
 }
 
